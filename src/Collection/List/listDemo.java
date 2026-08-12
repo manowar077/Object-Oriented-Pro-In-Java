@@ -6,15 +6,18 @@ import java.util.Objects;
 
 public class listDemo {
     static void main() {
-        List users =new ArrayList<>();
+        List<String> users =new ArrayList<>();
         users.add("Alice");
         users.add("Bobby");
         users.add("AAHANA");
         users.add("SHAMIA");
+      //  users.add(1234);
         IO.println("All User");
-        for(Object user:users){
+        for(String user:users){
             IO.println(user);
         }
+
+        IO.println("Element using index :"+ users.get(0));
     }
 
 }
