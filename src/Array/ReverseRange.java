@@ -7,8 +7,8 @@ public class ReverseRange {
         Scanner sc = new Scanner(System.in);
         int n= sc.nextInt();
         int[] arr=new int[n];
-        for(int i = 0; i<arr.length; i++){
-            arr[i]=sc.nextInt();
+        for(int k = 0; k<arr.length; k++){
+            arr[k]=sc.nextInt();
         }
         int i=sc.nextInt();
         int j= sc.nextInt();
