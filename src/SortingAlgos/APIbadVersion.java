@@ -12,7 +12,7 @@ public class APIbadVersion {
             while (low <= high) {
                 int mid = low + (high - low) / 2;
 
-                if (isBadVersion(mid)) {
+                if (DisBadVersion(     mid)) {
                     high = mid - 1;
                 } else {
                     low = mid + 1;
