@@ -16,22 +16,22 @@ public class spiralPrint {
         int count=0;
         int totalelement=arr.length*arr[0].length;
         while(count<totalelement)
-        for(int i=minc;i<=maxc;i++){
+        for(int i=minc;i<=maxc && count<totalelement;i++){
             IO.println(arr[minr][i]);
             count++;
         }
         minr++;
-        for(int i=minr;i<=maxr;i++){
+        for(int i=minr;i<=maxr && count<totalelement;i++){
             IO.println(arr[i][maxc]);
             count++;
         }
         maxc--;
-        for(int i=maxc;i>=minc;i--){
+        for(int i=maxc;i>=minc && count<totalelement;i--){
             IO.println(arr[maxr][i]);
             count++;
         }
         maxr--;
-        for(int i=maxr;i>=minr;i--){
+        for(int i=maxr;i>=minr && count<totalelement;i--){
             IO.println(arr[i][minc]);
             count++;
         }
