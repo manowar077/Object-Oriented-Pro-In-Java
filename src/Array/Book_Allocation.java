@@ -29,5 +29,22 @@ public class Book_Allocation {
 
     private static boolean itisposible(int[] page, int nos, int mid) {
         return false;
+        int student=1;
+        int readpage = 0;
+        for(int i = 0; i<page.length; i++){
+            if(readpage + page[i]<=mid){
+                readpage+=page[i];
+
+            }
+            else{
+                student++;
+                readpage=page[i];
+            }
+            if(student>nos){
+                return false;
+            }
+        }
+
+        return false;
     }
 }
