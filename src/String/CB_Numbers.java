@@ -4,14 +4,18 @@ public class CB_Numbers {
     static void main() {
         String s="81737";
     }
-    public static void PrintSubstring(String s){
+    public static int PrintSubstring(String s){
         int count=0;
         for(int len=1;len<=s.length();len++){
             for(int j=len;j<=s.length();j++){
                 int i=j-len;
                 String s1=s.substring(i,j);
+                if(IsCBnumber(Long.parseLong(s))==true){
+                    count++;
+                }
             }
         }
+        return count;
     }
     public static boolean IsCBnumber(long num){
         if(num==0 || num==1){
