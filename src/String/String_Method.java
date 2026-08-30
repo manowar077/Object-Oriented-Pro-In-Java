@@ -2,7 +2,7 @@ package String;
 
 public class String_Method {
     void main() {
-        String s1="hello";
+        String s1="Manowar alam";
         String s2="HEllo";
         IO.println(equals(s1,s2));
 
