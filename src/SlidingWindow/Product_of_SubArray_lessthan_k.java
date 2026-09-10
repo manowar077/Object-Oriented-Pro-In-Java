@@ -19,7 +19,7 @@ public class Product_of_SubArray_lessthan_k {
             pro*=arr[i];
 
             //shrinking
-            while(pro>=k){
+            while(pro>=k && ei<si){
                 pro/=arr[si];
                 si++;
             }
