@@ -12,7 +12,6 @@ public class Frequency_count {
         }
 
         for(int i=0;i<26;i++){
-            if
         }
     }
 }
