@@ -2,34 +2,23 @@ package String;
 import java.util.*;
 
 public class Toggle {
-    static void main() {
-        Scanner sc=new Scanner(System.in);
-        StringBuilder str=new StringBuilder(sc.next());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringBuilder str = new StringBuilder(sc.next());
 
-        //toggle case
-        //PhYSics->pHysICS
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
 
-        for(int i=0;i<str.length();i++){
-            //diff betweem assci value of A and a=32
-            //check aplhabet
-            boolean flag=true;
-            char ch=str.charAt(i);
-            int asci=(int)ch;
-
-            if(asci>=90){
-                flag=true;
-            }
-            if(flag==true){
-                asci+=32;
-                char dh=(char)asci;
-                str.setCharAt(i,dh);
-            }
-            else{
-                asci-=32;
-                char dh=(char)asci;
-                str.setCharAt(i,dh);
+            if (ch >= 'A' && ch <= 'Z') {
+                // Uppercase to lowercase
+                str.setCharAt(i, (char)(ch + 32));
+            } else if (ch >= 'a' && ch <= 'z') {
+                // Lowercase to uppercase
+                str.setCharAt(i, (char)(ch - 32));
             }
         }
-        IO.println(str);
+
+        System.out.println(str);
+        sc.close();
     }
 }
