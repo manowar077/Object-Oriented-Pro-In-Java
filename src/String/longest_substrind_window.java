@@ -13,6 +13,16 @@ public class longest_substrind_window {
         int left=0;
         int maxlength=0;
 
-        for()
+        for(int right=0;right<s.length();right++){
+
+            while(set.contains(s.charAt(right))){
+                set.remove(s.charAt(right));
+                left++;
+            }
+
+            set.add(s.charAt(right));
+            maxlength=Math.max(maxlength,right-left+1);
+        }
+        IO.println(maxlength);
     }
 }
