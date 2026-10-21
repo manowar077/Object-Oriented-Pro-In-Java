@@ -90,9 +90,7 @@ public class CompleteFunctions {
         System.out.println(multiline.lines().count());
 
         // 18. Compare with StringBuilder
-        System.out.println(
-                "Java".contentEquals(new StringBuilder("Java"))
-        );
+        System.out.println("Java".contentEquals(new StringBuilder("java")));
 
         // 19. Check prefix at a particular position
         System.out.println("Hello Java".startsWith("Java", 6));
