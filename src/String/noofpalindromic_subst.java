@@ -3,13 +3,22 @@ package String;
 public class noofpalindromic_subst {
     static void main() {
         String str="abcdcba";
-        StringBuilder gtr=new StringBuilder(str);
-        gtr.reverse();
-        if(str.equals(gtr)){
-            IO.println("Palindrome");
+        int i=0;
+        int j=str.length()-1;
+        boolean flag=true;
+        while(i<j){
+            if(str.charAt(i)!=str.charAt(j)){
+                flag=true;
+                break;
+            }
+            i++;
+            j--;
+        }
+        if(flag==true){
+            IO.println("palindrome");
         }
         else{
-            IO.println("not palindrome");
+            IO.println("Not palindromic");
         }
     }
 }
