@@ -2,7 +2,7 @@ package String;
 
 public class noofpalindromic_subst {
     static void main() {
-        String str="abcdcba";
+        String str="abcdcba";  
         int i=0;
         int j=str.length()-1;
         boolean flag=true;
