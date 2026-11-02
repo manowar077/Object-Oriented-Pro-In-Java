@@ -9,3 +9,4 @@ public class Time_and_space {
         IO.println(end-start);
     }
 }
+ 
