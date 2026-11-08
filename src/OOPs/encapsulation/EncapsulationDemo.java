@@ -13,19 +13,26 @@ package OOPs.encapsulation;
      }
 
      public void drive() {
+
          IO.println(brand + " is driving at " + speed);
      }
-
+      //encapsulation-> Change through function
      //Getter and seter
      public int getSpeed() {
+
          return speed;
      }
 
      public void setSpeed(int speed) {
+
          this.speed = speed;
      }
+     public void setBrand(int brand){
+         this.brand="BMW";
+     }
+
  }
-public class EncapsulationDemo {
+public class   EncapsulationDemo {
     static void main() {
         car car1 = new car("tmc","white",120);// creation of object
         car1.drive();
