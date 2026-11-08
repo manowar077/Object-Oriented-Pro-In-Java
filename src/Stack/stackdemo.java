@@ -11,5 +11,10 @@ public class stackdemo {
         st.push(50);
 
         IO.println(st.peek());
+        IO.println(st);
+        IO.println(st.isEmpty());
+        IO.println(st.pop());
+        IO.println(st);
+
     }
 }
