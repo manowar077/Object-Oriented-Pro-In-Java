@@ -30,6 +30,9 @@ package OOPs.encapsulation;
      public void setBrand(int brand){
          this.brand="BMW";
      }
+     public void setColor(int color){
+         this.color="yellow";
+     }
 
  }
 public class   EncapsulationDemo {
