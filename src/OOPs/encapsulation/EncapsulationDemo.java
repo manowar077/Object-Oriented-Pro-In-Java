@@ -1,5 +1,5 @@
 package OOPs.encapsulation;
- class car {
+  class car {
      private String brand;
      private String color;
      private  int price;
