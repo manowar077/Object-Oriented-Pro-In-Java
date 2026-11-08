@@ -7,7 +7,7 @@ public class Sbarry_sum_k {
         SumSubArray(nums,k);
         IO.println();
     }
-    public static int[] SumSubArray(int[] nums, int k){
+    public static int SumSubArray(int[] nums, int k){
         int n=nums.length;
         int[] prefix=new int[nums.length];
         prefix[0]=nums[0];
