@@ -37,11 +37,17 @@ class car {
     }
 
     // Setter with exception handling
-    public void setPrice(int price) throws Exception {
-
-        if (price < 0) {
+    public void setPrice(int price) {
+        try{
+            if (price < 0) {
             throw new Exception("Price kabhi negative nahi hota!");
         }
+            this.price=price;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
 
         this.price = price;
     }
@@ -74,17 +80,11 @@ public class exceptiondemo {
 
         System.out.println("------------------");
 
-        // Updating price
-        try {
-            car1.setPrice(150);
-            car1.drive();
 
-            // Negative price
-            car1.setPrice(-500);
+        // Negative price
+        car1.setPrice(-500);
 
-        } catch (Exception e) {
-            System.out.println("Exception: " + e.getMessage());
-        }
+
 
         System.out.println("------------------");
 
