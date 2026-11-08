@@ -2,30 +2,36 @@ package OOPs.encapsulation;
  class car {
      private String brand;
      private String color;
-     private  int speed;
+     private  int price;
      String stop;
 
      public car(String brand, String colcr, int speed) {
          IO.println("constructor called !");
          this.brand = brand;
          this.color = color;
-         this.speed = speed;
+         this.price= speed;
      }
 
      public void drive() {
 
-         IO.println(brand + " is driving at " + speed);
+         IO.println(brand + " is brand ka starting price ye ha " + price);
      }
       //encapsulation-> Change through function
      //Getter and seter
      public int getSpeed() {
 
-         return speed;
+         return price;
+     }
+     public void setPrice(int price) throws Exception {
+         if(price<0){
+            throw new Exception("Baklol price kabhi negative hota !");
+         }
+         this.price=price;
      }
 
      public void setSpeed(int speed) {
 
-         this.speed = speed;
+         this.price = speed;
      }
      public void setBrand(int brand){
          this.brand="BMW";
