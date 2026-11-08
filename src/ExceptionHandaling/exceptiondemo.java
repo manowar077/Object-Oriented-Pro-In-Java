@@ -47,6 +47,9 @@ class car {
         catch(Exception e){
             e.printStackTrace();
         }
+        finally{
+            IO.println("Always executed");
+        }
 
 
         this.price = price;
