@@ -15,9 +15,10 @@ public class StackImplementation {
        return top==-1;
    }
    public boolean isfull(){
-
+       return top==arr.length-1;
    }
    public void push(int item){
-
+       top++;
+       arr[top]=item;
    }
 }
