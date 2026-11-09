@@ -17,8 +17,12 @@ public class StackImplementation {
    public boolean isfull(){
        return top==arr.length-1;
    }
-   public void push(int item){
-       top++;
-       arr[top]=item;
-   }
+    public void push(int item) {
+        if (isfull()) {
+            throw new RuntimeException("Baklol, stack full hogaya hai!");
+        }
+
+        top++;
+        arr[top] = item;
+    }
 }

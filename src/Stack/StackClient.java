@@ -3,7 +3,7 @@ package Stack;
 import java.util.Stack;
 
 public class StackClient {
-    static void main() {
+    static void main() throws Exception {
         StackImplementation st=new StackImplementation();
         st.push(10);
         st.push(20);
