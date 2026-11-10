@@ -25,4 +25,24 @@ public class StackImplementation {
         top++;
         arr[top] = item;
     }
+    public int po(int item){
+       int rv=arr[top];
+       top--;
+       return rv;
+    }
+    public int peek(int item){
+       int rv=arr[top];
+       return rv;
+    }
+
+    public int size(){
+       return top+1;
+    }
+    public void display(){
+       for(int i=0;i<=top;i++){
+           IO.println(arr[i]+" ");
+
+       }
+        IO.println();
+    }
 }
