@@ -15,6 +15,7 @@ public class MiddleElement {
         st.push(50);
         int count=0;
         int size=st.size();
+        IO.println(size);
 
         printmiddleelement(st,size,count);
     }
@@ -24,7 +25,13 @@ public class MiddleElement {
         if(count==size/2){
             int middleelement=st.peek();
             IO.println(middleelement);
+            return;
         }
+
+        //1.case main main solve karunga baki recursion kar dega
+        st.pop();
+        count++;
+        printmiddleelement(st,size,count);
 
 
     }
