@@ -19,7 +19,7 @@ public class CheckRedudentBra {
         for (char ch : str.toCharArray()) {
 
             // Opening brackets
-            if (ch == '(' || ch == '{' || ch == '[') {
+            if (ch == '(') {
                 st.push(ch);
             }
 
@@ -28,39 +28,32 @@ public class CheckRedudentBra {
                     ch == '*' || ch == '/') {
                 st.push(ch);
             }
-
-            // Closing brackets
-            else if (ch == ')' || ch == '}' || ch == ']') {
-
-                boolean operatorfound = false;
-                boolean openingFound = false;
-
-                while (!st.isEmpty()) {
-
-                    char temp = st.peek();
-
-                    if (temp == '+' || temp == '-' ||
-                            temp == '*' || temp == '/') {
-                        operatorfound = true;
+            //closing
+            else if(ch==')'){
+                //main logic
+                //jab tak mujhe stack me is closing bracket kacoresponding opening baracket nahi milege tab tak
+                //main stack me se element pop karata rahunga
+                //and track rakhung ki koi operator beech me mila ya nahi
+                boolean operaterfound=false;
+                while(!st.isEmpty()){
+                    char temp=st.peek();
+                    if(temp=='+'||temp=='-'||temp=='*'||temp=='/'){
+                        operaterfound=true;
                     }
-
-                    // Matching opening bracket
-                    if ((ch == ')' && temp == '(') ||
-                            (ch == '}' && temp == '{') ||
-                            (ch == ']' && temp == '[')) {
-
+                    if(ch==')'&&temp=='('){
                         st.pop();
-                        openingFound = true;
                         break;
                     }
 
                     st.pop();
-                }
 
-                if (!openingFound || !operatorfound) {
+                }
+                if(operaterfound==false){
                     return true;
                 }
             }
+
+
         }
 
         return false;
