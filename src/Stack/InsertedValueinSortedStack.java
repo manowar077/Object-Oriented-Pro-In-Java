@@ -14,10 +14,26 @@ public class InsertedValueinSortedStack {
         IO.println(st);
     }
     public static void insertsort(Stack<Integer> st,int value){
-        int topvalue=st.peek();
-        if(st.peek()<value){
+        //base case
+        if(st.empty()){
             st.push(value);
+            return;
         }
-        //st.push(topvalue);
+
+        //mera case
+        int topvalue=st.peek();
+        //baki recursion sambhal lega
+        if(topvalue<value){
+            st.pop();
+            insertsort(st,value);
+            st.push(topvalue);
+        }
+        else{
+            st.push(value);
+            return;
+        }
+        // recursive se ate kuch kaam kar leta ha
+
+
     }
 }
