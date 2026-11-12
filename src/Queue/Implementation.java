@@ -13,5 +13,15 @@ public class Implementation {
     public Implementation(int n){
         arr=new int[n];
     }
+    public boolean isEmpty(){
+        return size==0;
+    }
+    public boolean isFull(){
+        return size==arr.length;
+    }
+
+    public void Enque(int item){
+
+    }
 
 }
