@@ -24,14 +24,28 @@ public class Implementation {
         if(isFull()){
             throw new Exception("Baklol queue full hai");
         }
+        int idx=(front+size)%arr.length;
         arr[size]=item;
         size++;
     }
-    public int Dequeue(){
+    public int Dequeue() throws Exception{
+        if(isEmpty()){
+            throw new Exception("Baklol queue full hai");
+        }
         int rv=arr[front];
-        front++;
+        front=(front+1)%arr.length;
         size--;
         return rv;
     }
+    public int getFront() throws Exception{
+        if(isEmpty()){
+            throw new Exception("Baklol queue full hai");
+        }
+        int rv=arr[front];
+        return rv;
+    }
+
+
+
 
 }
