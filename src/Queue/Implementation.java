@@ -6,7 +6,7 @@ public class Implementation {
     private int[] arr;
     private int front=0;
     private int size=0;
-    public Queue(){
+    public Implementation(){
         arr=new int[5];
 
     }
