@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class Queue_client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         Queue<Integer> q = new LinkedList<>();
 
