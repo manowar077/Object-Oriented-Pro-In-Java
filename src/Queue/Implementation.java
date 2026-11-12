@@ -20,8 +20,18 @@ public class Implementation {
         return size==arr.length;
     }
 
-    public void Enque(int item){
-
+    public void Enque(int item) throws Exception {
+        if(isFull()){
+            throw new Exception("Baklol queue full hai");
+        }
+        arr[size]=item;
+        size++;
+    }
+    public int Dequeue(){
+        int rv=arr[front];
+        front++;
+        size--;
+        return rv;
     }
 
 }
