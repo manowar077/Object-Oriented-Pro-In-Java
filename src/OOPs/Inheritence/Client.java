@@ -16,7 +16,7 @@ public class Client {
         P object1 =new C();
         IO.println(object1.d);
         IO.println(object1.d1);
-        IO.println(object1.d2);
+        IO.println(((C)object1).d2);
 
     }
 }
