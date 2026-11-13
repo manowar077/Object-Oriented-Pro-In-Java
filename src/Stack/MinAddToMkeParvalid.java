@@ -8,6 +8,7 @@ public class MinAddToMkeParvalid {
     public static void main(String[] args) {
         String s = "())))";
         System.out.println(checkvakid(s));
+        minAddToMakeValid(s);
     }
 
     public static int checkvakid(String s) {
@@ -31,6 +32,29 @@ public class MinAddToMkeParvalid {
         }
 
         return closebracket + st.size();
+    }
+    public static int minAddToMakeValid(String s) {
+
+        int openbracket = 0;
+        Stack<Character> st = new Stack<>();
+
+        for (char ch : s.toCharArray()) {
+
+            if (ch == '(') {
+                st.push(ch);
+            }
+            else if (ch == ')') {
+
+                if (!st.isEmpty()) {
+                    st.pop();
+                }
+                else {
+                    openbracket++;
+                }
+            }
+        }
+
+        return openbracket + st.size();
     }
 
 }
