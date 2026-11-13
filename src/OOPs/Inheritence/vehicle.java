@@ -8,7 +8,7 @@ public class vehicle {
             this.speed = speed;
             this.brand = brand;
         }
-//getter
+//getter  
     public String getBrand() {
         return brand;
     }
