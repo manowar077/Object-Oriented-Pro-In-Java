@@ -18,5 +18,14 @@ public class Client {
         IO.println(object1.d1);
         IO.println(((C)object1).d2);
 
+        //3rd case
+        C objcte = new C();
+
+        //4th case
+        C objectee =new C();
+        IO.println(objectee.d);
+        IO.println(objectee.d1);
+        IO.println(objectee.d2);
+
     }
 }
