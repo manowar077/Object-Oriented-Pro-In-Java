@@ -1,28 +1,44 @@
 package Stack;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class StockSpanproblem {
     public static void main(String[] args) {
-        int[] prices = {100, 80, 60, 70, 60, 75, 85};
-        int n = prices.length;
-        int[] spans = new int[n];
+        int[] arr = {100, 80, 60, 70, 60, 75, 85};
+        int n = arr.length;
+        int[] ans= new int[n];
 
-        Stack<Integer> stack = new Stack<>();
-        spans[0] = 1;
-        stack.push(0);
+        Stack<Integer> st= new Stack<>();
 
-        for (int i = 1; i < n; i++) {
-            while (!stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
-                stack.pop();
+       for (int i = 0; i < n; i++) {
+
+            // Remove smaller or equal elements
+            while (!st.isEmpty() && arr[i] >= arr[st.peek()]) {
+                st.pop();
             }
 
-            spans[i] = stack.isEmpty() ? i + 1 : i - stack.peek();
-            stack.push(i);
+            // No previous greater element
+            if (st.isEmpty()) {
+                ans[i] = i + 1;
+            } 
+            else {
+                ans[i] = i - st.peek();
+            }
+
+            st.push(i);
         }
 
-        for (int i = 0; i < n; i++) {
-            System.out.print(spans[i] + " ");
+        // Convert int[] into ArrayList<Integer>
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int value : ans) {
+            result.add(value);
+        }
+
+        // Print the stock span result
+        for (int value : result) {
+            System.out.print(value + " ");
         }
     }
 }
