@@ -21,6 +21,23 @@ public class RemoveKDigits {
             //insert the curreent char
             st.push(ch);
         }
+        //step2: agar kuch removals still pending h to take care of it
+        while(k>0&& !st.isEmpty()){
+            st.pop();
+            k--;
+        }
+
+        //step 3: build your string reverse it.
+        StringBuilder ans=new StringBuilder();
+        while(!st.isEmpty()){
+            ans.append(st.peek());
+            st.pop();
+        }
+        //ans reverse karna ha
+        ans.reverse();
+
+        //remove leading zeros
+        
 
     }
 
