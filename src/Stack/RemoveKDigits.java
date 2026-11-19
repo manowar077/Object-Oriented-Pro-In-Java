@@ -37,7 +37,11 @@ public class RemoveKDigits {
         ans.reverse();
 
         //remove leading zeros
-        
+        int index=0;
+        while(index<ans.length()&& ans.charAt(index)=='0'){
+             index++;
+        }
+        String result=ans.substring(index);
 
     }
 
