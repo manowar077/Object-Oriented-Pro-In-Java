@@ -7,8 +7,9 @@ public class RemoveKDigits {
       String num = "1432219";
       int k = 3;
       remove(num,k);
+      
     }
-    static void remove(String num,int k){
+    static String remove(String num,int k){
         Deque<Character> st=new ArrayDeque<>();
         
         //apply monotanic stack pattern on input string 
@@ -42,6 +43,13 @@ public class RemoveKDigits {
              index++;
         }
         String result=ans.substring(index);
+
+        if(result.length()==0){
+            return "0";
+        }
+        else{
+            return result;
+        }
 
     }
 
