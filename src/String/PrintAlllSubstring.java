@@ -1,5 +1,4 @@
 package String;
-import java.util.*;
 
 public class PrintAlllSubstring {
     static void main() {

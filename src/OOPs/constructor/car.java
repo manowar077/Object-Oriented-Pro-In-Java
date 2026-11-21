@@ -9,7 +9,7 @@ public class car {
         public car (String brand,String colcr,int speed){
             IO.println("constructor called !");
             this.brand=brand;
-            this.color=color;
+            this.color=colcr;
             this.speed=speed;
         }
         public void drive(){

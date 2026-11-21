@@ -2,7 +2,8 @@ package String;
 
 public class CB_Numbers {
     static void main() {
-        String s="81737";
+        String s = "81737";
+        IO.println(PrintSubstring(s));
     }
     public static int PrintSubstring(String s){
         int count=0;
@@ -10,7 +11,7 @@ public class CB_Numbers {
             for(int j=len;j<=s.length();j++){
                 int i=j-len;
                 String s1=s.substring(i,j);
-                if(IsCBnumber(Long.parseLong(s))==true){
+                if(IsCBnumber(Long.parseLong(s1))==true){
                     count++;
                 }
             }

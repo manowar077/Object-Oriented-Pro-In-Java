@@ -7,7 +7,7 @@ public class TransposeSquare {
                         {9,10,11,12},
                         {13,14,15,16}};
 
-           TransposeSquare(arr);
+           transpose(arr);
            for(int i=0;i<arr.length;i++){
                for(int j=0;j<arr[0].length;j++){
                    IO.println(arr[i][j]+ " ");
@@ -15,7 +15,7 @@ public class TransposeSquare {
                IO.println();
            }
     }
-    public static void TransposeSquare(int[][] arr){
+    public static void transpose(int[][] arr){
         for(int i=0;i<arr.length;i++){
             for(int j=i+1;j<arr[0].length;j++) {
                 int temp = arr[i][j];

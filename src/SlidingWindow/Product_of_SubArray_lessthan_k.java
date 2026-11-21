@@ -7,8 +7,8 @@ public class Product_of_SubArray_lessthan_k {
         IO.println(countOfsuarray(arr,k));
     }
     public static int countOfsuarray(int[] arr,int k){
-        int i=0,j=0;
-        int si=0;
+        int i = 0;
+        int si = 0;
         int ei=0;
         int pro=1;
         int ans=0;

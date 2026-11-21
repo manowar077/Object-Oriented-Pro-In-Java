@@ -1,3 +1,5 @@
+package Backtracking;
+
 public class TwoQueen {
     static void main() {
         int n=4;

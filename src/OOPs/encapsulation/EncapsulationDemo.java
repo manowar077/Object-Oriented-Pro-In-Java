@@ -8,13 +8,13 @@ package OOPs.encapsulation;
      public car(String brand, String colcr, int speed) {
          IO.println("constructor called !");
          this.brand = brand;
-         this.color = color;
+         this.color = colcr;
          this.price= speed;
      }
 
      public void drive() {
 
-         IO.println(brand + " is brand ka starting price ye ha " + price);
+         IO.println(brand + " is brand ka starting price ye ha " + price + " and color is " + color);
      }
       //encapsulation-> Change through function
      //Getter and seter

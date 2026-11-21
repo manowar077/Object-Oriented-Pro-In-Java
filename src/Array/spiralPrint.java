@@ -6,9 +6,9 @@ public class spiralPrint {
                 {5,6,7,8},
                 {9,10,11,12},
                 {13,14,15,16}};
-        spiralPrint(arr);
+        printSpiral(arr);
     }
-    public static void spiralPrint(int[][] arr){
+    public static void printSpiral(int[][] arr){
         int minr=0;
         int maxr=arr.length-1;
         int minc=0;

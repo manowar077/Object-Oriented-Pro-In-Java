@@ -23,6 +23,7 @@ public class StringFunctions {
 
         int num=5123;
         String str7=String.valueOf(num);
+        IO.println(str7);
         IO.println(num+1);
 
         String namee="Rana Love bana";

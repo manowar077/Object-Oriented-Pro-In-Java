@@ -1,7 +1,5 @@
 package Stack;
 
-import java.util.Stack;
-
 public class StackClient {
     static void main() throws Exception {
         StackImplementation st=new StackImplementation();

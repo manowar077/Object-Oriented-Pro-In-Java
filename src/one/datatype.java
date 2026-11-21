@@ -5,11 +5,8 @@ public class datatype {
 
         int input=583;
 
-        int sum=0;
-
-        //byte result=a+b;
-        //var result1 = result;
-        //IO.println(result1);
+        int sum = input + 417;
+        IO.println(sum);
 
     }
 }

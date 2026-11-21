@@ -5,6 +5,10 @@ public class Celebrityproblem {
     public static void main(String[] args) {
        int mat[][] = {{1, 1, 0}, {0, 1, 0}, {0, 1, 1}};
 
+        System.out.println(findCelebrity(mat));
+    }
+
+    public static int findCelebrity(int[][] mat) {
         int n = mat.length;
 
         Stack<Integer> st = new Stack<>();
@@ -27,5 +31,19 @@ public class Celebrityproblem {
             }
 
         }
+
+        //possible celeb
+        int candidate=st.pop();
+
+        //verify candidate
+        for(int i=0;i<n;i++){
+            if(i==candidate){
+                continue;
+            }
+            if(mat[candidate][i]==1 || mat[i][candidate]==0){
+                return -1;
+            }
+        }
+        return candidate;
     }
 }

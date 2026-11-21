@@ -2,7 +2,6 @@ package Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Reverse_queue {
     static void main() {

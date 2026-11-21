@@ -1,7 +1,5 @@
 package Queue;
 
-import java.util.Queue;
-
 public class Implementation {
     private int[] arr;
     private int front=0;
@@ -25,7 +23,7 @@ public class Implementation {
             throw new Exception("Baklol queue full hai");
         }
         int idx=(front+size)%arr.length;
-        arr[size]=item;
+        arr[idx]=item;
         size++;
     }
     public int Dequeue() throws Exception{

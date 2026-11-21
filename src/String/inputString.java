@@ -14,5 +14,6 @@ public class inputString {
         String str2= sc.next();  //taking first word before space
         IO.println("value of next line :"+str2);
 
+        sc.close();
     }
 }

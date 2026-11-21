@@ -1,7 +1,6 @@
 package OOPs.polymorphisam;
 
 public class car extends vehicle {
-    private int doors;
 
     public car(String brand,int speed){
         super(brand,speed);

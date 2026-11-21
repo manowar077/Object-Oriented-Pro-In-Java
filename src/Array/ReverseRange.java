@@ -14,9 +14,10 @@ public class ReverseRange {
         int j= sc.nextInt();
         Reverse(arr,i,j);
 
-        for(int a=0;i<arr.length;i++){
-            IO.println(arr[i]+" ");
+        for (int k = 0; k < arr.length; k++) {
+            IO.println(arr[k] + " ");
         }
+        sc.close();
     }
     public static void Reverse(int[] arr,int i,int j){
         while(i<j){

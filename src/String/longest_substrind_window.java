@@ -24,5 +24,6 @@ public class longest_substrind_window {
             maxlength=Math.max(maxlength,right-left+1);
         }
         IO.println(maxlength);
+        sc.close();
     }
 }

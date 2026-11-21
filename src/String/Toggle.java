@@ -1,5 +1,6 @@
 package String;
-import java.util.*;
+
+import java.util.Scanner;
 
 public class Toggle {
     public static void main(String[] args) {

@@ -20,6 +20,7 @@ public class Client {
 
         //3rd case
         C objcte = new C();
+        IO.println(objcte.d2);
 
         //4th case
         C objectee =new C();

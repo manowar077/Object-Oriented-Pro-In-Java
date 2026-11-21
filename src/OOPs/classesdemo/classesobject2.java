@@ -11,10 +11,9 @@ public class classesobject2 {
         car2.color="maroon";
         car2.drive();
 
-        Date date =new Date();
-        File file;
-
-
-
+        Date date = new Date();
+        IO.println(date);
+        File file = new File("example.txt");
+        IO.println(file.getName());
     }
 }

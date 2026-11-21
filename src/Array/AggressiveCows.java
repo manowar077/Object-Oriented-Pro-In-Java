@@ -16,6 +16,7 @@ public class AggressiveCows {
 
         Arrays.sort(stall);
         System.out.println(Mindistance(stall, noc));
+        sc.close();
     }
 
     public static int Mindistance(int[] stall, int noc) {
