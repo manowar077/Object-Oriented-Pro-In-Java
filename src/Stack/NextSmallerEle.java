@@ -9,16 +9,22 @@ public class NextSmallerEle {
         int[] result = new int[n];
         Stack<Integer> st = new Stack<>();
         
-        for(int i=n;i<0;i--){
+        for(int i=n-1;i>=0;i--){
             while(!st.isEmpty() &&  arr[st.peek()] < arr[i]){
-              if(st.peek()>arr[i]){
-                st.pop();
-              }
-              else{
-                
-              }
+              st.pop();
             }
-            st.push(i);
+         // If stack is empty, no smaller element exists
+            //ab sara useless element pop hogaya hoge 
+            //ans stack ya to empty hogaya hoga
+            //ya fir stack k tap per ek useful element hoga
+            if(st.isEmpty()){
+                result[i]=-1;
+
+            }
+            else{
+                // Top of stack is the next smaller element
+                result[i] = st.peek();
+            }
         }
         
     }
