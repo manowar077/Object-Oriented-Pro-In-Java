@@ -1,4 +1,3 @@
-
 package Stack;
 
 import java.util.ArrayDeque;
@@ -57,14 +56,11 @@ public class AstriodCollision {
             }
         }
 
-        // Create result array
+        // Convert stack into an answer array
         int[] ans = new int[st.size()];
 
-        // Fill array in correct order
-        int i = st.size() - 1;
-
-        for (int asteroid : st) {
-            ans[i--] = asteroid;
+        for (int i = ans.length - 1; i >= 0; i--) {
+            ans[i] = st.pop();
         }
 
         return ans;
