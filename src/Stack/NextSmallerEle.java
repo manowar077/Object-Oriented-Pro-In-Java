@@ -1,36 +1,39 @@
+
 package Stack;
 
 import java.util.Arrays;
 import java.util.Stack;
 
 public class NextSmallerEle {
-    public static void main(){
-        int[] arr={4, 8, 5, 2, 25};
-         int n = arr.length;
-        int[] result = new int[n];
-        Stack<Integer> st = new Stack<>();
-        
-        for(int i=n-1;i>=0;i--){
-            while(!st.isEmpty() &&  arr[st.peek()] < arr[i]){
-              st.pop();
-            }
-         // If stack is empty, no smaller element exists
-            //ab sara useless element pop hogaya hoge 
-            //ans stack ya to empty hogaya hoga
-            //ya fir stack k tap per ek useful element hoga
-            if(st.isEmpty()){
-                result[i]=-1;
 
+    public static void main(String[] args) {
+
+        int[] arr = {4, 8, 5, 2, 25};
+
+        int n = arr.length;
+        int[] result = new int[n];
+
+        Stack<Integer> st = new Stack<>();
+
+        // Traverse from right to left
+        for (int i = n - 1; i >= 0; i--) {
+
+            // Remove all greater or equal elements
+            while (!st.isEmpty() && st.peek() >= arr[i]) {
+                st.pop();
             }
-            else{
-                // Top of stack is the next smaller element
+
+            // Check whether smaller element exists
+            if (st.isEmpty()) {
+                result[i] = -1;
+            } else {
                 result[i] = st.peek();
             }
 
-             // Push current element into stack
+            // Push current element
             st.push(arr[i]);
         }
+
         System.out.println(Arrays.toString(result));
-        
     }
 }
