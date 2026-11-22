@@ -1,5 +1,6 @@
 package Stack;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class NextSmallerEle {
@@ -25,7 +26,11 @@ public class NextSmallerEle {
                 // Top of stack is the next smaller element
                 result[i] = st.peek();
             }
+
+             // Push current element into stack
+            st.push(arr[i]);
         }
+        System.out.println(Arrays.toString(result));
         
     }
 }
