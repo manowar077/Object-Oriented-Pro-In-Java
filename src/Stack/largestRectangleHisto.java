@@ -48,7 +48,11 @@ public class largestRectangleHisto {
 
         for(int i=0;i<n;i++){
            int width=pse[i]-nse[i];
+
+           int area=arr[i]*width;
+           maxarea=Math.max(maxarea,area);
         }
+        System.out.println(maxarea);  
 
 
 
